@@ -9,9 +9,11 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField]
     private float spawnTime;
     [SerializeField]
-    private Vector2 spawnPosition1;
+    private float maxY;
     [SerializeField]
-    private Vector2 spawnPosition2;
+    private float gapSize;
+    [SerializeField]
+    private float xPos;
 
 
     private float spawnTimer;
@@ -35,10 +37,13 @@ public class PipeSpawner : MonoBehaviour
 
     void SpawnPipe()
     {
+        float spawnPosition1 = (Random.value * maxY) + 7;
+        float spawnPosition2 = spawnPosition1 - gapSize;
+
         GameObject pipe1 = Instantiate(pipe);
         GameObject pipe2 = Instantiate(pipe);
 
-        pipe1.transform.position = spawnPosition1;
-        pipe2.transform.position = spawnPosition2;
+        pipe1.transform.position = new Vector3(xPos, spawnPosition1, 0);
+        pipe2.transform.position = new Vector3(xPos, spawnPosition2, 0);
     }
 }
