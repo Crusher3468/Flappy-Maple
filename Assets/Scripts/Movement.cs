@@ -5,27 +5,23 @@ using static UnityEngine.ParticleSystem;
 
 public class Movement : MonoBehaviour
 {
-    GameObject particle;
-    // Start is called before the first frame update
+    private Vector3 force;
+    private Rigidbody2D rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         foreach (Touch touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began) 
             {
-                // Construct a ray from the current touch coordinates
-                Ray ray = Camera.main.ScreenPointToRay(touch.position);
-                if (Physics.Raycast(ray))
-                {
-                    // Create a particle if hit
-                    Instantiate(particle, transform.position, transform.rotation);
-                }
+                print("Tap");
+                Vector3 direction = Vector2.zero;
+                rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
             }
         }
 
