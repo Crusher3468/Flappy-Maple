@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
             {
                 print("Tap");
                 Vector3 direction = Vector2.zero;
-                rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
             }
         }
 
