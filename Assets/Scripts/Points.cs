@@ -5,6 +5,7 @@ using UnityEngine;
 public class Points : MonoBehaviour
 {
     int score = 0;
+    GameObject other;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,11 @@ public class Points : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        score++;
-        print(score);
+        if (collision.gameObject.tag == "Point")
+        {
+            score++;
+            print(score);
+            //Destroy();
+        }
     }
 }
