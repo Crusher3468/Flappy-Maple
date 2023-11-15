@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     private Vector3 force;
     private Rigidbody2D rb;
+    [SerializeField] float speed;
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class Movement : MonoBehaviour
             {
                 print("Tap");
                 Vector3 direction = Vector2.zero;
-                rb.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
             }
         }
 
