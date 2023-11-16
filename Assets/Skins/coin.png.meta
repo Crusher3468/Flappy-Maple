@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2277f975821c324f827d00994de9288
+guid: b0c6ecd65763e484e949143da8c6b5da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -90,30 +90,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -129,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flappy-bird_Neon_0
+      name: coin_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb38a5db8dec054798ff48884f59fe6
-      internalID: -1703461902
+      spriteID: d8771e6be5bb9d84ba0873b07f1b0b15
+      internalID: 1822050519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flappy-bird_Neon_1
+      name: coin_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c1db7febea646a46a4780da0cea2938
-      internalID: -91302799
+      spriteID: 429e3ef6472289c47a4747bde5f64309
+      internalID: -613471227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flappy-bird_Neon_2
+      name: coin_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 586f1f9412d201c4585835d7b116600e
-      internalID: -2024263238
+      spriteID: 03771468d023b2b439e7e6e5bdd108f3
+      internalID: 460591385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flappy-bird_Neon_3
+      name: coin_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 088682e4e5422bd439a7005a1a89c35d
-      internalID: 890229488
+      spriteID: 4e2f4c70034801d43b76ee5066dd6284
+      internalID: -273225379
       vertices: []
       indices: 
       edges: []
@@ -215,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: dec9bdec20b821641b4cffb92385cda3
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      flappy-bird_Neon_0: -1703461902
-      flappy-bird_Neon_1: -91302799
-      flappy-bird_Neon_2: -2024263238
-      flappy-bird_Neon_3: 890229488
+      coin_0: 1822050519
+      coin_1: -613471227
+      coin_2: 460591385
+      coin_3: -273225379
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
