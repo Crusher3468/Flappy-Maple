@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Points : MonoBehaviour
@@ -18,13 +20,15 @@ public class Points : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Point")
+        Console.WriteLine("collision");
+
+        if (collision.gameObject.CompareTag("Point"))
         {
             score++;
             print(score);
-            //Destroy();
+            Destroy(collision.gameObject);
         }
     }
 }

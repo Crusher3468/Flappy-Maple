@@ -7,13 +7,19 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField]
     private GameObject pipe;
     [SerializeField]
+    private GameObject coin;
+    [SerializeField]
     private float spawnTime;
     [SerializeField]
     private float maxY;
     [SerializeField]
-    private float gapSize;
+    private float minY;
     [SerializeField]
     private float xPos;
+    [SerializeField]
+    private float CoinSpawnChance;
+    
+
 
 
     private float spawnTimer;
@@ -37,13 +43,18 @@ public class PipeSpawner : MonoBehaviour
 
     void SpawnPipe()
     {
-        float spawnPosition1 = (Random.value * maxY) + 7;
-        float spawnPosition2 = spawnPosition1 - gapSize;
+        GameObject go = Instantiate(pipe);
 
-        GameObject pipe1 = Instantiate(pipe);
-        GameObject pipe2 = Instantiate(pipe);
+        float random = Random.Range(minY, maxY);
 
-        pipe1.transform.position = new Vector3(xPos, spawnPosition1, 0);
-        pipe2.transform.position = new Vector3(xPos, spawnPosition2, 0);
+        go.transform.position = new Vector3(xPos, random);
+
+        float randomCoin = Random.Range(0, 100);
+
+        if (randomCoin < CoinSpawnChance)
+        {
+            GameObject c = Instantiate(coin);
+            c.transform.position = new Vector3(xPos, random + 8.45f);
+        }
     }
 }

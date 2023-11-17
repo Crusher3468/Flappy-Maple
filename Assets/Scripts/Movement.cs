@@ -25,6 +25,5 @@ public class Movement : MonoBehaviour
                 rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
             }
         }
-
     }
 }
