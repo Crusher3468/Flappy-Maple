@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: be427bb48d0c5df47984b657fae821d0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameMusic: {instanceID: 0}
+  - WinUI: {instanceID: 0}
+  - playerPrefab: {instanceID: 0}
+  - playerStart: {instanceID: 0}
+  - startGameEvent: {instanceID: 0}
+  - stopGameEvent: {instanceID: 0}
+  - winGameEvent: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
