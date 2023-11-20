@@ -5,25 +5,28 @@ using static UnityEngine.ParticleSystem;
 
 public class Movement : MonoBehaviour
 {
-    private Vector3 force;
     private Rigidbody2D rb;
     [SerializeField] float speed;
+
+    private Vector3 direction;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        direction = Vector3.up * speed;
     }
 
     void Update()
     {
         foreach (Touch touch in Input.touches)
         {
-            if (touch.phase == TouchPhase.Began) 
+            if (touch.phase == TouchPhase.Began)
             {
                 print("Tap");
-                Vector3 direction = Vector2.zero;
-                rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
+                direction = Vector3.up * speed;
             }
         }
+        direction.y += -19.6f * Time.deltaTime;
+        transform.position += direction * Time.deltaTime;
     }
 }

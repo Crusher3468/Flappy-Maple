@@ -20,6 +20,6 @@ public class ScrollMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position += movement;
+        gameObject.transform.position += movement * Time.deltaTime;
     }
 }
