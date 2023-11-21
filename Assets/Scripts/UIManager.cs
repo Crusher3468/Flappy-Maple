@@ -13,12 +13,29 @@ public class UIManager : Singleton<UIManager>
     //[SerializeField] GameObject gameOverUI;
     [SerializeField] GameObject TitleUI;
     [SerializeField] GameObject ShopUI;
-    //[SerializeField] GameObject SettingUI;
+    [SerializeField] GameObject LevelUI;
+    [SerializeField] GameObject SettingsUI;
 
 	public void ShowTitle(bool show)
     {
         TitleUI.SetActive(show);
     }
+
+    public void ShowSettings(bool show)
+    {
+        SettingsUI.SetActive(show);
+    }
+
+    public void ShowShop(bool show)
+    {
+        ShopUI.SetActive(show);
+    }
+
+    public void ShowLevel(bool show)
+    {
+        LevelUI.SetActive(show);
+    }
+
 
     public void ShowGameOver(bool show)
     {
