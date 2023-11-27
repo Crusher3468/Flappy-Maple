@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -38,7 +39,7 @@ public class GameManager : Singleton<GameManager>
         switch (state)
         {
             case State.TITLE:
-                //UIManager.Instance.ShowTitle(true);
+                UIManager.Instance.ShowTitle(true);
                 //Cursor.lockState = CursorLockMode.None;
                 //Cursor.visible = true;
                 break;
@@ -75,10 +76,37 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void Testing()
+    public void Shop()
     {
-        print("Buttn Pushed");
+        UIManager.Instance.ShowTitle(false);
+        UIManager.Instance.ShowShop(true);
     }
+
+    public void Level()
+    {
+        UIManager.Instance.ShowTitle(false);
+        UIManager.Instance.ShowLevel(true);
+    }
+
+    public void Settings()
+    {
+        UIManager.Instance.ShowTitle(false);
+        UIManager.Instance.ShowSettings(true);
+    }
+    public void Back()
+    {;
+        UIManager.Instance.ShowShop(false);
+        UIManager.Instance.ShowLevel(false);
+        UIManager.Instance.ShowSettings(false);
+        UIManager.Instance.ShowTitle(true);
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene("First Level");
+        state = State.START_GAME;
+    }
+
     public void Start()
     {
         winGameEvent.onEvent += SetGameWin;
