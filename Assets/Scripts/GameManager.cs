@@ -11,7 +11,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] AudioSource gameMusic;
 
     [SerializeField] GameObject WinUI;
-    [SerializeField] GameObject playerPrefab;
+    [SerializeField] public GameObject playerPrefab;
     [SerializeField] Transform playerStart;
 
     [Header("Events")]
@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
         GAME_WIN
     }
 
-    State state = State.TITLE;
+    State state = State.START_GAME;
     float statetimer = 0;
 
     private void Update()
@@ -39,11 +39,13 @@ public class GameManager : Singleton<GameManager>
         switch (state)
         {
             case State.TITLE:
+                Hide();
                 UIManager.Instance.ShowTitle(true);
                 //Cursor.lockState = CursorLockMode.None;
                 //Cursor.visible = true;
                 break;
             case State.START_GAME:
+                Hide();
                 score = 0;
                 //UIManager.Instance.ShowTitle(false);
                 //Cursor.lockState = CursorLockMode.Locked;
@@ -78,27 +80,34 @@ public class GameManager : Singleton<GameManager>
 
     public void Shop()
     {
-        UIManager.Instance.ShowTitle(false);
+        Hide();
         UIManager.Instance.ShowShop(true);
     }
 
     public void Level()
     {
-        UIManager.Instance.ShowTitle(false);
+        Hide();
         UIManager.Instance.ShowLevel(true);
     }
 
     public void Settings()
     {
-        UIManager.Instance.ShowTitle(false);
+        Hide();
         UIManager.Instance.ShowSettings(true);
     }
     public void Back()
     {;
+        Hide();
+        UIManager.Instance.ShowTitle(true);
+    }
+
+    public void Hide()
+    {
+        UIManager.Instance.ShowEnd(false);
+        UIManager.Instance.ShowTitle(false);
         UIManager.Instance.ShowShop(false);
         UIManager.Instance.ShowLevel(false);
         UIManager.Instance.ShowSettings(false);
-        UIManager.Instance.ShowTitle(true);
     }
 
     public void Level1()
@@ -164,4 +173,10 @@ public class GameManager : Singleton<GameManager>
 	{
 		GameManager.Instance.SetGameOver();
 	}
+
+    public void exit()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }

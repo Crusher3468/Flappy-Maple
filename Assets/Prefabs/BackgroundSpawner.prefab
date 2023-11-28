@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &410012743648888645
+--- !u!1 &4723055362999003687
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 410012743648888647}
-  - component: {fileID: 410012743648888644}
+  - component: {fileID: 4723055362999003685}
+  - component: {fileID: 4723055362999003686}
   m_Layer: 0
-  m_Name: PipeSpawner
+  m_Name: BackgroundSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &410012743648888647
+--- !u!4 &4723055362999003685
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410012743648888645}
+  m_GameObject: {fileID: 4723055362999003687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,22 +32,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &410012743648888644
+--- !u!114 &4723055362999003686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410012743648888645}
+  m_GameObject: {fileID: 4723055362999003687}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f87f205c78b03a438e93b01e8885f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipe: {fileID: 65044306525668786, guid: 2418b8f791620784abda519b8451165b, type: 3}
+  pipe: {fileID: 8028505787231571334, guid: 5bcbf1fc2388c704ca5b8288f5430b3e, type: 3}
   coin: {fileID: 1562632842287938438, guid: 3ec60cf77bac978498d1be59a6a2d3e7, type: 3}
-  spawnTime: 1.5
-  maxY: 0.5
-  minY: -5.5
-  xPos: 25
-  CoinSpawnChance: 25
+  spawnTime: 19.988
+  maxY: 0
+  minY: 0
+  xPos: 60
+  CoinSpawnChance: 0
