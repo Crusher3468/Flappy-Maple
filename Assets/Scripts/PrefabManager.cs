@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PrefabManager : Singleton<PrefabManager>
 {
-    GameManager gameManager;
-    public SpriteRenderer skin;
+    //GameManager gameManager;
+    [SerializeField] SpriteRenderer skin;
 
     [SerializeField] Sprite prefab1;
     [SerializeField] Sprite prefab2;
@@ -17,9 +17,10 @@ public class PrefabManager : Singleton<PrefabManager>
     [SerializeField] Sprite prefab8;
     //[SerializeField] GameObject prefab9;
 
+
     public void Start()
     {
-       skin = gameManager.playerPrefab.GetComponent<SpriteRenderer>();
+        //skin = gameManager.playerPrefab.GetComponent<SpriteRenderer>();
     }
 
     public void Skin1()

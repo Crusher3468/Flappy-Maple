@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
         GAME_WIN
     }
 
-    State state = State.START_GAME;
+    State state = State.TITLE;
     float statetimer = 0;
 
     private void Update()
@@ -39,8 +39,8 @@ public class GameManager : Singleton<GameManager>
         switch (state)
         {
             case State.TITLE:
-                Hide();
-                UIManager.Instance.ShowTitle(true);
+                //Hide();
+                //UIManager.Instance.ShowShop(true);
                 //Cursor.lockState = CursorLockMode.None;
                 //Cursor.visible = true;
                 break;
@@ -49,7 +49,7 @@ public class GameManager : Singleton<GameManager>
                 score = 0;
                 //UIManager.Instance.ShowTitle(false);
                 //Cursor.lockState = CursorLockMode.Locked;
-                //Instantiate(playerPrefab, playerStart);
+                Instantiate(playerPrefab, playerStart);
                 state = State.PLAY_GAME;
                 startGameEvent.Notify();
                 gameMusic.Play();
@@ -113,6 +113,18 @@ public class GameManager : Singleton<GameManager>
     public void Level1()
     {
         SceneManager.LoadScene("First Level");
+        state = State.START_GAME;
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Second Level");
+        state = State.START_GAME;
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene("Third Level");
         state = State.START_GAME;
     }
 
