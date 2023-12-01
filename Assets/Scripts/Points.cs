@@ -6,28 +6,22 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
-    int score = 0;
-    GameObject other;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    [SerializeField]
+    private PointsTracker tracker;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Console.WriteLine("collision");
+        Debug.Log(collision.gameObject.tag);
 
-        if (collision.gameObject.CompareTag("Point"))
+        if (collision.gameObject.CompareTag("Coin"))
         {
-            score++;
-            print(score);
+            tracker.SetCoins(tracker.GetCoins() + 1);
+            Destroy(collision.gameObject);
+            Debug.Log(tracker.GetCoins());
+        }
+        else if (collision.gameObject.CompareTag("Point"))
+        {
+            tracker.SetScore(tracker.GetScore() + 1);
             Destroy(collision.gameObject);
         }
     }
