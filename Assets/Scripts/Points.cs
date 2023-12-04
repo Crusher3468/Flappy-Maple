@@ -16,6 +16,7 @@ public class Points : MonoBehaviour
         if (collision.gameObject.CompareTag("Coin"))
         {
             tracker.SetCoins(tracker.GetCoins() + 1);
+            GameManager.Instance.AddPoints(1);
             Destroy(collision.gameObject);
             Debug.Log(tracker.GetCoins());
         }
