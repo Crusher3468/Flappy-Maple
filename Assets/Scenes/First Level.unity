@@ -244,6 +244,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 410012743648888644, guid: 4864e126f9b0f804a8d0307f6a197408, type: 3}
+      propertyPath: maxY
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 410012743648888644, guid: 4864e126f9b0f804a8d0307f6a197408, type: 3}
+      propertyPath: minY
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 410012743648888644, guid: 4864e126f9b0f804a8d0307f6a197408, type: 3}
+      propertyPath: spawnTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 410012743648888645, guid: 4864e126f9b0f804a8d0307f6a197408, type: 3}
       propertyPath: m_Name
       value: PipeSpawner
