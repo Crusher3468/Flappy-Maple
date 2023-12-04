@@ -10,7 +10,14 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Animator animator = GetComponent<Animator>();
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if(spriteRenderer.sprite.name != "flappy-bird_Neon_2")
+        {
+            animator.enabled = false;
+        }
     }
 
     // Update is called once per frame
