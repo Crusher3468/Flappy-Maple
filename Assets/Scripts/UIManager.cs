@@ -9,11 +9,13 @@ public class UIManager : Singleton<UIManager>
 {
     //[SerializeField] Slider healthMeter;
     //[SerializeField] Slider shieldMeter;
-    //[SerializeField] TMP_Text scoreUI;
+    [SerializeField] TMP_Text scoreUI;
     //[SerializeField] GameObject gameOverUI;
     [SerializeField] GameObject TitleUI;
     [SerializeField] GameObject ShopUI;
     [SerializeField] GameObject LevelUI;
+    [SerializeField] GameObject GameUI;
+    [SerializeField] GameObject PauseUI;
     [SerializeField] GameObject SettingsUI;
     [SerializeField] GameObject GameOverUI;
 
@@ -42,6 +44,16 @@ public class UIManager : Singleton<UIManager>
         GameOverUI.SetActive(show);
     }
 
+    public void ShowPause(bool show)
+    {
+        PauseUI.SetActive(show);
+    }
+
+    public void ShowGame(bool show)
+    {
+        GameUI.SetActive(show);
+    }
+
 
     public void ShowGameOver(bool show)
     {
@@ -60,7 +72,7 @@ public class UIManager : Singleton<UIManager>
 
     public void SetScore(int score)
     {
-        //scoreUI.text = score.ToString();
+        scoreUI.text = score.ToString();
     }
 
 }

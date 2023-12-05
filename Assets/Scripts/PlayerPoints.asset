@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82937777ad538654383fc850c5ef781e, type: 3}
   m_Name: PlayerPoints
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: 16
   score: 0

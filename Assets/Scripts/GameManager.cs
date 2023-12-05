@@ -101,12 +101,20 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.ShowTitle(true);
     }
 
+    public void Paue()
+    {
+        Hide();
+        UIManager.Instance.ShowPause(true);
+    }
+
     public void Hide()
     {
         UIManager.Instance.ShowEnd(false);
         UIManager.Instance.ShowTitle(false);
         UIManager.Instance.ShowShop(false);
         UIManager.Instance.ShowLevel(false);
+        UIManager.Instance.ShowGame(false);
+        UIManager.Instance.ShowPause(false);
         UIManager.Instance.ShowSettings(false);
     }
 
@@ -114,18 +122,21 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene("First Level");
         state = State.START_GAME;
+        UIManager.Instance.ShowGame(true);
     }
 
     public void Level2()
     {
         SceneManager.LoadScene("Second Level");
         state = State.START_GAME;
+        UIManager.Instance.ShowGame(true);
     }
 
     public void Level3()
     {
         SceneManager.LoadScene("Third Level");
         state = State.START_GAME;
+        UIManager.Instance.ShowGame(true);
     }
 
     public void Start()
