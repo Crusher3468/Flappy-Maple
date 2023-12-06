@@ -107,6 +107,13 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.ShowPause(true);
     }
 
+    public void End()
+    {
+        SceneManager.LoadScene("Title Screen");
+        Hide();
+        UIManager.Instance.ShowEnd(true);
+    }
+
     public void Hide()
     {
         UIManager.Instance.ShowEnd(false);
@@ -197,7 +204,7 @@ public class GameManager : Singleton<GameManager>
 		GameManager.Instance.SetGameOver();
 	}
 
-    public void exit()
+    public void Exit()
     {
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
