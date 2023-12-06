@@ -10,6 +10,7 @@ public class Pipe : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Player"))
         {
+            GameManager.Instance.End();
             Destroy(collision.gameObject);
         }
     }

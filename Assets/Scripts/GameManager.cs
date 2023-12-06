@@ -12,7 +12,7 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] GameObject WinUI;
     [SerializeField] public GameObject playerPrefab;
-    [SerializeField] Transform playerStart;
+    //[SerializeField] Transform playerStart;
 
     [Header("Events")]
 
@@ -34,6 +34,11 @@ public class GameManager : Singleton<GameManager>
     State state = State.TITLE;
     float statetimer = 0;
 
+    private void Awake()
+    {
+
+    }
+
     private void Update()
     {
         switch (state)
@@ -49,7 +54,8 @@ public class GameManager : Singleton<GameManager>
                 score = 0;
                 //UIManager.Instance.ShowTitle(false);
                 //Cursor.lockState = CursorLockMode.Locked;
-                Instantiate(playerPrefab, playerStart);
+                //Instantiate(playerPrefab, playerStart);
+                UIManager.Instance.ShowGame(true);
                 state = State.PLAY_GAME;
                 startGameEvent.Notify();
                 gameMusic.Play();
@@ -57,13 +63,12 @@ public class GameManager : Singleton<GameManager>
             case State.PLAY_GAME:
                 break;
             case State.GAME_OVER:
-                statetimer -= Time.deltaTime;
-                if (statetimer <= 0)
-                {
-                    UIManager.Instance.ShowGameOver(false);
-                    DestroyImmediate(playerPrefab);
-                    state = State.TITLE;
-                }
+                //statetimer -= Time.deltaTime;
+                //if (statetimer <= 0)
+                //{
+                Hide();
+                UIManager.Instance.ShowEnd(true);
+                //}
                 break;
             case State.GAME_WIN:
                 statetimer -= Time.deltaTime;
@@ -109,9 +114,9 @@ public class GameManager : Singleton<GameManager>
 
     public void End()
     {
-        SceneManager.LoadScene("Title Screen");
-        Hide();
-        UIManager.Instance.ShowEnd(true);
+        UIManager.Instance.SetTotal();
+        SceneManager.LoadScene("TestScene");
+        state = State.GAME_OVER;
     }
 
     public void Hide()
@@ -129,12 +134,12 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene("First Level");
         state = State.START_GAME;
-        UIManager.Instance.ShowGame(true);
     }
 
     public void Level2()
     {
         SceneManager.LoadScene("Second Level");
+        UIManager.Instance.ShowGame(true);
         state = State.START_GAME;
         UIManager.Instance.ShowGame(true);
     }

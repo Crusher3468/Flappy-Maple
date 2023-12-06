@@ -50,4 +50,4 @@ MonoBehaviour:
   maxY: 0.5
   minY: -5.5
   xPos: 25
-  CoinSpawnChance: 25
+  CoinSpawnChance: 100

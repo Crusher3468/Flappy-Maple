@@ -10,6 +10,7 @@ public class UIManager : Singleton<UIManager>
     //[SerializeField] Slider healthMeter;
     //[SerializeField] Slider shieldMeter;
     [SerializeField] TMP_Text scoreUI;
+    [SerializeField] TMP_Text EndScoreUI;
     //[SerializeField] GameObject gameOverUI;
     [SerializeField] GameObject TitleUI;
     [SerializeField] GameObject ShopUI;
@@ -73,6 +74,10 @@ public class UIManager : Singleton<UIManager>
     public void SetScore(int score)
     {
         scoreUI.text = score.ToString();
+    }
+    public void SetTotal()
+    {
+        EndScoreUI.text = scoreUI.text;
     }
 
 }

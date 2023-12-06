@@ -8,9 +8,9 @@ MonoImporter:
   - WinUI: {instanceID: 0}
   - playerPrefab: {instanceID: 0}
   - playerStart: {instanceID: 0}
-  - startGameEvent: {instanceID: 0}
-  - stopGameEvent: {instanceID: 0}
-  - winGameEvent: {instanceID: 0}
+  - startGameEvent: {fileID: 11400000, guid: e63510207cf4c1d4b8c11f557bc35190, type: 2}
+  - stopGameEvent: {fileID: 11400000, guid: 9fd715e839420734d879d9b8bb2f1d70, type: 2}
+  - winGameEvent: {fileID: 11400000, guid: f25d52a3f7ae4094482dc8164e039b5e, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
